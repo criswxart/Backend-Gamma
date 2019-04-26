@@ -1,0 +1,22 @@
+#Spring properties
+
+#Configuración con la BD
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/CIRGamma
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: create-drop
+#Configuración de la zona-fecha
+  jackson:
+    joda-date-time-format: America/Santiago
+    locale: es_CL
+#Configuración de mapeo
+logging:
+  level:
+    org.hibernate.SQL: debug
+
