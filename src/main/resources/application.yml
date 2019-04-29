@@ -3,7 +3,7 @@
 #Configuración con la BD
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/CIRGamma
+    url: jdbc:mysql://localhost:3306/CIRGamma?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver

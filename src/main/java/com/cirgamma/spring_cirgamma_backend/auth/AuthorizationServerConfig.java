@@ -34,9 +34,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     }
 
     @Override
-    public void configure(ClientDetailsServiceConfigurer profesionales) throws Exception {
+    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
-        profesionales.inMemory().withClient("angularapp")
+        clients.inMemory().withClient("angularapp")
                 .secret(passwordEncoder.encode("12345"))
                 .scopes("read", "write")
                 .authorizedGrantTypes("password","refresh_token")
